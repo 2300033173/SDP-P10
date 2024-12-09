@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Logo -->
+    <img id="logo" src="logo.jpg" alt="Language Learning Platform Logo">
+
+    <!-- Heading for Language Learning Platform -->
+    <h1 id="platform-title">Language Learning Platform</h1>
+
+    <!-- Login and Registration -->
+    <div id="auth">
+        <h2 id="auth-title">Login</h2>
+        <form id="auth-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="#" id="switch-to-register">Register</a></p>
+        </form>
+    </div>
+
+    <!-- Main Content -->
+    <div id="app-content" class="hidden">
+        <header>
+            <h1>Welcome <span id="user-name"></span></h1>
+            <button id="logout">Logout</button>
+        </header>
+
+        <div id="courses">
+            <h2>Available Courses</h2>
+            <div id="available-courses" class="course-list"></div>
+            
+            <video id="courseVideo" controls style="display:none;">
+                <source id="videoSource" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button id="close-btn" style="display:none">Close Video</button>
+
+            <h2>Registered Courses</h2>
+            <div id="registered-courses" class="course-list"></div>
+
+            <h2>Completed Courses</h2>
+            <div id="completed-courses" class="course-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
